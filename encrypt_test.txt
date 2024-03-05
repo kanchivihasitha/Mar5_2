@@ -1,0 +1,185 @@
+--------------------------------CK----------------------------------------------------
+
+root@imx6qsabresd-mel:~# cat /proc/version
+Linux version 5.4.242+ga865349e9f (oe-user@oe-host) (gcc version 9.5.0 (Sourcery CodeBench 12.0.18)) #1 SMP PREEMPT Thu Jun 22 11:21:03 UTC 2023
+root@imx6qsabresd-mel:~# getfattr -m . -d /usr/bin/lsusb
+getfattr: Removing leading '/' from absolute path names
+# file: usr/bin/lsusb
+security.evm=0sBQIEQ1DrBQEAwvJ54Vi58cMMJq8l1nSno3QYxTLGX0yu41BSOmO62DSbyJutFft+SuwuhoYFFMw8VAvgDpYzLiiFBBcAazxO1Y9xwovQQHNDBR3PVRVZZ57PYrfzfcpC6ankNiNVoG6Et1ozhtYtI9pAKAdM1StWvYPCdDAnqqODoVWtgN7QBddfJIb=
+security.ima=0sBAT4BkzMcx1r2+JRUlTNmMQuCa6e3uK/6fAKaDaZOV9QQA==
+
+root@imx6qsabresd-mel:~# /usr/bin/scp
+usage: scp [-346ABCpqrTv] [-c cipher] [-F ssh_config] [-i identity_file]
+            [-J destination] [-l limit] [-o ssh_option] [-P port]
+            [-S program] source ... target
+root@imx6qsabresd-mel:~# echo 1 >> /usr/bin/scp
+root@imx6qsabresd-mel:~# /usr/bin/scp
+[ 2743.304144] kauditd_printk_skb: 24 callbacks suppressed
+[ 2743.304158] audit: type=1800 audit(1687435023.070:36): pid=1258 uid=0 auid=4294967295 ses=4294967295 op=appraise_data cause=invalid-hash comm="sh" name="/usr/bin/scp.openssh" dev="mmcblk2p3" ino=19160
+-sh: /usr/bin/scp: Permission denied
+root@imx6qsabresd-mel:~# ls -alh /usr/bin/chfn
+lrwxrwxrwx    1 root     root          20 Jun 22 11:22 /usr/bin/chfn -> /usr/bin/chfn.shadow
+root@imx6qsabresd-mel:~# chmod 755 /usr/bin/chfn
+[ 2753.737335] audit: type=1801 audit(1687435033.490:37): pid=1261 uid=0 auid=4294967295 ses=4294967295 op=appraise_metadata cause=pass_immutable comm="chmod" name="chfn.shadow" dev="mmcblk2p3" ino=17110
+chmod: /usr/bin/chfn: Operation not permitted
+root@imx6qsabresd-mel:~# head /sys/kernel/security/ima/ascii_runtime_measurements
+10 0adefe762c149c7cec19da62f0da1297fcfbffff ima-ng sha256:0000000000000000000000000000000000000000000000000000000000000000 boot_aggregate
+10 7d067e9b1ae8aed086c9c85a98090c1f23987b09 ima-ng sha256:3162f09b7797c918bfd9ee104bf92ecafc8fa6edfee9b6dd69a6e8c7217d8031 /lib/systemd/systemd
+10 da80668d31face7f20b31b0da633a60e571b74a8 ima-ng sha256:ef8fb10f2c1029e3a9a4aa9e68efb36345b2494efe8d790048c81edc63caf8db /lib/ld-2.31.so
+10 cf7293449ee4d58f19b718ca1b2c564d0c974fc6 ima-ng sha256:fa0bd2ba1876eefb2e65f3f8a76bb379791a75bda125833d93c2ed59e9d0ca26 /lib/systemd/libsystemd-shared-244.so
+10 741fadeb0e2cc6b3ab5228abeb10ee6c2231d6ea ima-ng sha256:b909d7c8fb98e819064152e60c20e6c9bdd1b1f65c0d5c119a1e6acc0c2a0f14 /etc/ld.so.cache
+10 a2d02c6abdb56674743d9528f77395e03c77fe23 ima-ng sha256:a9f530c015a69e4d49643d17430c9cdaa3eb33b98561d26edb69c98daad4d0b9 /lib/librt-2.31.so
+10 f95a0ea89fe3d9b8864cf21be8a7299f2a73c661 ima-ng sha256:f3373639e58cb627d0e5c1671565bf693fcf4e8604db7c4dbf682dd8e3bc0b2f /lib/libmount.so.1.1.0
+10 626d0695c81a73a52c5eea03c8637bde44cd7c80 ima-ng sha256:55c86b0959f08f2a417d358e37f15597c3b6c0e9c4a2967bbb4f9bc78b327322 /usr/lib/libkmod.so.2.3.4
+10 ec7999cc7e8fa2eabea6593172994fdda4639dce ima-ng sha256:44149feee334bcfc6b10c730ac579b10bd105874bd90988e2b7caca9694700c7 /lib/libpthread-2.31.so
+10 d97aab35bd3ed4b20a5ed62ece941b53a66aeb0c ima-ng sha256:afe2f0f9b3f0bb9269c074c3ba460815611cb20892a0fbc3aa6d3d84f2dfaeed /lib/libc-2.31.so
+root@imx6qsabresd-mel:~# cat /sys/kernel/security/ima/policy
+dont_appraise fsmagic=0x9fa0 
+dont_measure fsmagic=0x9fa0 
+dont_appraise fsmagic=0x62656572 
+dont_measure fsmagic=0x62656572 
+dont_appraise fsmagic=0x64626720 
+dont_measure fsmagic=0x64626720 
+dont_appraise fsmagic=0x1021994 
+dont_measure fsmagic=0x1021994 
+dont_appraise fsmagic=0x858458f6 
+dont_measure fsmagic=0x858458f6 
+dont_appraise fsmagic=0x1cd1 
+dont_measure fsmagic=0x1cd1 
+dont_appraise fsmagic=0x42494e4d 
+dont_measure fsmagic=0x42494e4d 
+dont_appraise fsmagic=0x73636673 
+dont_measure fsmagic=0x73636673 
+dont_appraise fsmagic=0xf97cff8c 
+dont_measure fsmagic=0xf97cff8c 
+dont_appraise fsmagic=0x6e736673 
+dont_measure fsmagic=0x6e736673 
+dont_appraise fsmagic=0x27e0eb 
+dont_measure fsmagic=0x27e0eb 
+measure func=BPRM_CHECK 
+appraise func=BPRM_CHECK euid=0 
+measure func=MMAP_CHECK mask=MAY_EXEC 
+measure func=FILE_CHECK mask=MAY_READ uid=0 
+measure func=FILE_CHECK mask=MAY_READ uid=0 
+appraise func=MMAP_CHECK euid=0 
+measure func=MODULE_CHECK 
+appraise func=MODULE_CHECK euid=0 
+measure func=FIRMWARE_CHECK 
+appraise func=FIRMWARE_CHECK euid=0 
+appraise func=POLICY_CHECK euid=0 appraise_type=imasig 
+root@imx6qsabresd-mel:~# dmesg | grep -i error
+[    5.490573] egalax_ts: probe of 2-0004 failed with error -110
+[   16.705051] ov5640_read_reg:write reg error:reg=300a
+[   16.845084] ov5640_read_reg:write reg error:reg=300a
+[   19.116577] ERROR: v4l2 capture: slave not found!
+[   19.118040] ERROR: v4l2 capture: slave not found!
+root@imx6qsabresd-mel:~# dmesg | grep -i fail 
+[    0.348827] anatop_regulator 20c8000.anatop:regulator-1p1: failed to register vdd1p1
+[    0.349693] anatop_regulator 20c8000.anatop:regulator-2p5: failed to register vdd2p5
+[    0.349966] vddarm: failed to get the current voltage(-517)
+[    0.349988] anatop_regulator 20c8000.anatop:regulator-vddcore: failed to register vddarm
+[    0.350695] vddsoc: failed to get the current voltage(-517)
+[    0.350717] anatop_regulator 20c8000.anatop:regulator-vddsoc: failed to register vddsoc
+[    4.862834] egalax_ts 1-0004: Failed to switch to I2C interface
+[    5.484635] egalax_ts 2-0004: Failed to switch to I2C interface
+[    5.490573] egalax_ts: probe of 2-0004 failed with error -110
+[    6.445310] failed to register cpuidle driver
+[    6.576429] vddarm: failed to get the current voltage(-517)
+[    6.591158] vddsoc: failed to get the current voltage(-517)
+root@imx6qsabresd-mel:~# dmesg | grep -i warn
+[   14.804107] random: 76 urandom warning(s) missed due to ratelimiting
+root@imx6qsabresd-mel:~# 
+
+
+--------------------------------DK----------------------------------------------------
+
+
+root@imx6qsabresd-mel:~# cat /proc/version
+Linux version 5.4.242+ga865349e9f (oe-user@oe-host) (gcc version 9.5.0 (Sourcery CodeBench 12.0.18)) #1 SMP PREEMPT Thu Jun 22 11:01:05 UTC 2023
+root@imx6qsabresd-mel:~# getfattr -m . -d /usr/bin/lsusb
+getfattr: Removing leading '/' from absolute path names
+# file: usr/bin/lsusb
+security.evm=0sBQIED4xKzwEAbhq+2/f8+SvJeQCMIxg/kk1nPsDKWkcBWAkzEe1XH0CBsl/SZXVer9UAaUPgqSEAzodjT6kTOjsncacu9J7jkowi1MjrFOHusmBN1ajzUcfQI/G20qp+sAeQ0X0UJXy8m3QTw688Z1np1c54P2es9gGZ5Rs36r/f0xs5X99lmlC7iPY=
+security.ima=0sBAT4BkzMcx1r2+JRUlTNmMQuCa6e3uK/6fAKaDaZOV9QQA==
+
+root@imx6qsabresd-mel:~# /usr/bin/scp
+usage: scp [-346ABCpqrTv] [-c cipher] [-F ssh_config] [-i identity_file]
+            [-J destination] [-l limit] [-o ssh_option] [-P port]
+            [-S program] source ... target
+root@imx6qsabresd-mel:~# echo 1 >> /usr/bin/scp                                                                                                                                                            
+root@imx6qsabresd-mel:~# /usr/bin/scp
+[  247.184303] kauditd_printk_skb: 24 callbacks suppressed
+-sh: /usr/bin/scp: Permission den[  247.184318] audit: type=1800 audit(1687431183.050:36): pid=1086 uid=0 auid=4294967295 ses=4294967295 op=appraise_data cause=invalid-hash comm="sh" name="/usr/bin/scp.0
+ied
+root@imx6qsabresd-mel:~# ls -alh /usr/bin/chfn
+lrwxrwxrwx    1 root     root          20 Jun 22 11:02 /usr/bin/chfn -> /usr/bin/chfn.shadow
+root@imx6qsabresd-mel:~# chmod 755 /usr/bin/chfn
+[  261.482706] audit: type=1801 audit(1687431197.340:37): pid=1090 uid=0 auid=4294967295 ses=4294967295 op=appraise_metadata cause=pass_immutable comm="chmod" name="chfn.shadow" dev="mmcblk2p3" ino=17110
+chmod: /usr/bin/chfn: Operation not permitted
+root@imx6qsabresd-mel:~# head /sys/kernel/security/ima/ascii_runtime_measurements
+10 0adefe762c149c7cec19da62f0da1297fcfbffff ima-ng sha256:0000000000000000000000000000000000000000000000000000000000000000 boot_aggregate
+10 7d067e9b1ae8aed086c9c85a98090c1f23987b09 ima-ng sha256:3162f09b7797c918bfd9ee104bf92ecafc8fa6edfee9b6dd69a6e8c7217d8031 /lib/systemd/systemd
+10 da80668d31face7f20b31b0da633a60e571b74a8 ima-ng sha256:ef8fb10f2c1029e3a9a4aa9e68efb36345b2494efe8d790048c81edc63caf8db /lib/ld-2.31.so
+10 e0839f15eac6d70512b0e64fdcf96567fad84a07 ima-ng sha256:6cabd2ae52018a36f70160853ee5b7e062c2f858782d822999ac3528a92c0ef9 /lib/systemd/libsystemd-shared-244.so
+10 741fadeb0e2cc6b3ab5228abeb10ee6c2231d6ea ima-ng sha256:b909d7c8fb98e819064152e60c20e6c9bdd1b1f65c0d5c119a1e6acc0c2a0f14 /etc/ld.so.cache
+10 a2d02c6abdb56674743d9528f77395e03c77fe23 ima-ng sha256:a9f530c015a69e4d49643d17430c9cdaa3eb33b98561d26edb69c98daad4d0b9 /lib/librt-2.31.so
+10 f95a0ea89fe3d9b8864cf21be8a7299f2a73c661 ima-ng sha256:f3373639e58cb627d0e5c1671565bf693fcf4e8604db7c4dbf682dd8e3bc0b2f /lib/libmount.so.1.1.0
+10 626d0695c81a73a52c5eea03c8637bde44cd7c80 ima-ng sha256:55c86b0959f08f2a417d358e37f15597c3b6c0e9c4a2967bbb4f9bc78b327322 /usr/lib/libkmod.so.2.3.4
+10 ec7999cc7e8fa2eabea6593172994fdda4639dce ima-ng sha256:44149feee334bcfc6b10c730ac579b10bd105874bd90988e2b7caca9694700c7 /lib/libpthread-2.31.so
+10 d97aab35bd3ed4b20a5ed62ece941b53a66aeb0c ima-ng sha256:afe2f0f9b3f0bb9269c074c3ba460815611cb20892a0fbc3aa6d3d84f2dfaeed /lib/libc-2.31.so
+root@imx6qsabresd-mel:~# cat /sys/kernel/security/ima/policy
+dont_appraise fsmagic=0x9fa0 
+dont_measure fsmagic=0x9fa0 
+dont_appraise fsmagic=0x62656572 
+dont_measure fsmagic=0x62656572 
+dont_appraise fsmagic=0x64626720 
+dont_measure fsmagic=0x64626720 
+dont_appraise fsmagic=0x1021994 
+dont_measure fsmagic=0x1021994 
+dont_appraise fsmagic=0x858458f6 
+dont_measure fsmagic=0x858458f6 
+dont_appraise fsmagic=0x1cd1 
+dont_measure fsmagic=0x1cd1 
+dont_appraise fsmagic=0x42494e4d 
+dont_measure fsmagic=0x42494e4d 
+dont_appraise fsmagic=0x73636673 
+dont_measure fsmagic=0x73636673 
+dont_appraise fsmagic=0xf97cff8c 
+dont_measure fsmagic=0xf97cff8c 
+dont_appraise fsmagic=0x6e736673 
+dont_measure fsmagic=0x6e736673 
+dont_appraise fsmagic=0x27e0eb 
+dont_measure fsmagic=0x27e0eb 
+measure func=BPRM_CHECK 
+appraise func=BPRM_CHECK euid=0 
+measure func=MMAP_CHECK mask=MAY_EXEC 
+measure func=FILE_CHECK mask=MAY_READ uid=0 
+measure func=FILE_CHECK mask=MAY_READ uid=0 
+appraise func=MMAP_CHECK euid=0 
+measure func=MODULE_CHECK 
+appraise func=MODULE_CHECK euid=0 
+measure func=FIRMWARE_CHECK 
+appraise func=FIRMWARE_CHECK euid=0 
+appraise func=POLICY_CHECK euid=0 appraise_type=imasig 
+root@imx6qsabresd-mel:~# dmesg | grep -i error
+[    5.490742] egalax_ts: probe of 2-0004 failed with error -110
+[   16.895648] ov5640_read_reg:write reg error:reg=300a
+[   17.065237] ov5640_read_reg:write reg error:reg=300a
+[   19.292922] ERROR: v4l2 capture: slave not found!
+[   19.317423] ERROR: v4l2 capture: slave not found!
+root@imx6qsabresd-mel:~# dmesg | grep -i warn 
+[   14.739713] random: 76 urandom warning(s) missed due to ratelimiting
+root@imx6qsabresd-mel:~# dmesg | grep -i fail
+[    0.358784] anatop_regulator 20c8000.anatop:regulator-1p1: failed to register vdd1p1
+[    0.359650] anatop_regulator 20c8000.anatop:regulator-2p5: failed to register vdd2p5
+[    0.359931] vddarm: failed to get the current voltage(-517)
+[    0.359956] anatop_regulator 20c8000.anatop:regulator-vddcore: failed to register vddarm
+[    0.360655] vddsoc: failed to get the current voltage(-517)
+[    0.360679] anatop_regulator 20c8000.anatop:regulator-vddsoc: failed to register vddsoc
+[    4.863015] egalax_ts 1-0004: Failed to switch to I2C interface
+[    5.484803] egalax_ts 2-0004: Failed to switch to I2C interface
+[    5.490742] egalax_ts: probe of 2-0004 failed with error -110
+[    6.465524] failed to register cpuidle driver
+[    6.597366] vddarm: failed to get the current voltage(-517)
+[    6.612106] vddsoc: failed to get the current voltage(-517)
+root@imx6qsabresd-mel:~#

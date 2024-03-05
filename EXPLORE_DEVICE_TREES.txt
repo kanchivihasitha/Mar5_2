@@ -1,0 +1,124 @@
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0$ ls
+0001-enable-wdog1-instead-of-wdog2.patch  deploy-linux-mel           fs.cfg           lttng.cfg       pkgdata-pdata-input  recipe-sysroot-native       sstate-install-package_qa         systemd.cfg
+acl.cfg                                   dev-mapper.cfg             git              mtd.cfg         pkgdata-sysroot      rfkill.cfg                  sstate-install-package_write_ipk  temp
+build                                     enable_HID_multitouch.cfg  image            package         posix-mqueue.cfg     sstate-install-deploy       sstate-install-populate_lic       wireless.cfg
+defconfig                                 f2fs.cfg                   imx-sdma.cfg     packages-split  pseudo               sstate-install-package      sstate-install-populate_sysroot
+deploy-ipks                               fbcon.cfg                  license-destdir  pkgdata         recipe-sysroot       sstate-install-packagedata  sysroot-destdir
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0$ cd git/
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git$ git log
+commit d2733fa89b43278c4c24178392eb3d97e9bf3cbc (grafted, HEAD -> mel-imx-5.4.47_2.2.0-5.4.47, origin/mel-imx-5.4.47_2.2.0-5.4.47)
+Author: Noor-Ahsan <Noor-Ahsan@users.noreply.github.com>
+Date:   Tue Nov 14 15:53:07 2023 +0500
+
+    Merge pull request #226 from pragow0k/fir_u10_main
+    
+    imx6ullevk/imx6qsabresd/imx8mnevk kernel update - 5.4.251 to 5.4.260
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git$ ls
+arch   certs    CREDITS  Documentation  fs       init  Kbuild   kernel  LICENSES     Makefile  net      README   scripts   sound  usr
+block  COPYING  crypto   drivers        include  ipc   Kconfig  lib     MAINTAINERS  mm        patches  samples  security  tools  virt
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git$ cd arch/arm64/boot/dts/
+actions/   allwinner/ amd/       apm/       bitmain/   cavium/    freescale/ intel/     marvell/   nvidia/    realtek/   rockchip/  sprd/      ti/        zte/       
+al/        altera/    amlogic/   arm/       broadcom/  exynos/    hisilicon/ lg/        mediatek/  qcom/      renesas/   socionext/ synaptics/ xilinx/    
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git$ cd arch/arm64/boot/dts/
+actions/   allwinner/ amd/       apm/       bitmain/   cavium/    freescale/ intel/     marvell/   nvidia/    realtek/   rockchip/  sprd/      ti/        zte/       
+al/        altera/    amlogic/   arm/       broadcom/  exynos/    hisilicon/ lg/        mediatek/  qcom/      renesas/   socionext/ synaptics/ xilinx/    
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git$ cd arch/arm64/boot/dts/freescale/
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git/arch/arm64/boot/dts/freescale$ ls
+fsl-ls1012a-2g5rdb.dts                    imx8dx-mek-it6263-lvds0-dual-channel-rpmsg.dts  imx8mq-evk-dcss-rm67191.dts                 imx8qxp-mek-a0.dts
+fsl-ls1012a.dtsi                          imx8dx-mek-it6263-lvds1-dual-channel.dts        imx8mq-evk-dp.dts                           imx8qxp-mek-dom0.dts
+fsl-ls1012a-frdm.dts                      imx8dx-mek-it6263-lvds1-dual-channel-rpmsg.dts  imx8mq-evk.dts                              imx8qxp-mek-dpu-lcdif.dts
+fsl-ls1012a-frwy.dts                      imx8dx-mek-jdi-wuxga-lvds0-panel.dts            imx8mq-evk-dual-display.dts                 imx8qxp-mek-dpu-lcdif-rpmsg.dts
+fsl-ls1012a-oxalis.dts                    imx8dx-mek-jdi-wuxga-lvds0-panel-rpmsg.dts      imx8mq-evk-inmate.dts                       imx8qxp-mek-dsi-rm67191.dts
+fsl-ls1012a-qds.dts                       imx8dx-mek-jdi-wuxga-lvds1-panel.dts            imx8mq-evk-lcdif-adv7535.dts                imx8qxp-mek-dsi-rm67191-rpmsg.dts
+fsl-ls1012a-rdb.dts                       imx8dx-mek-jdi-wuxga-lvds1-panel-rpmsg.dts      imx8mq-evk-lcdif-rm67191.dts                imx8qxp-mek-dsp.dts
+fsl-ls1028a.dtsi                          imx8dx-mek-ov5640.dts                           imx8mq-evk-pcie1-m2.dts                     imx8qxp-mek.dts
+fsl-ls1028a-qds-13bb.dts                  imx8dx-mek-ov5640-rpmsg.dts                     imx8mq-evk-pcie-ep.dts                      imx8qxp-mek-enet2.dts
+fsl-ls1028a-qds-65bb.dts                  imx8dx-mek-rpmsg.dts                            imx8mq-evk-pdm.dts                          imx8qxp-mek-enet2-tja1100.dts
+fsl-ls1028a-qds-7777.dts                  imx8dxp.dtsi                                    imx8mq-evk-root.dts                         imx8qxp-mek-inmate.dts
+fsl-ls1028a-qds-85bb.dts                  imx8dxp-lpddr4-val.dts                          imx8mq-evk-rpmsg.dts                        imx8qxp-mek-it6263-lvds0-dual-channel.dts
+fsl-ls1028a-qds-899b.dts                  imx8mm-ab2.dts                                  imx8mq-evk-usdhc2-m2.dts                    imx8qxp-mek-it6263-lvds0-dual-channel-rpmsg.dts
+fsl-ls1028a-qds-9999.dts                  imx8mm-ab2-m4.dts                               imx8mq-evk-usd-wifi.dts                     imx8qxp-mek-it6263-lvds1-dual-channel.dts
+fsl-ls1028a-qds.dts                       imx8mm-ddr3l-val.dts                            imx8mq-hummingboard-pulse.dts               imx8qxp-mek-it6263-lvds1-dual-channel-rpmsg.dts
+fsl-ls1028a-rdb-dpdk.dts                  imx8mm-ddr4-ab2.dts                             imx8mq-librem5-devkit.dts                   imx8qxp-mek-jdi-wuxga-lvds0-panel.dts
+fsl-ls1028a-rdb.dts                       imx8mm-ddr4-ab2-m4.dts                          imx8mq-nitrogen.dts                         imx8qxp-mek-jdi-wuxga-lvds0-panel-rpmsg.dts
+fsl-ls1043a.dtsi                          imx8mm-ddr4-ab2-m4-revb.dts                     imx8mq-pico-pi.dts                          imx8qxp-mek-jdi-wuxga-lvds1-panel.dts
+fsl-ls1043a-qds.dts                       imx8mm-ddr4-ab2-revb.dts                        imx8mq-pinfunc.h                            imx8qxp-mek-jdi-wuxga-lvds1-panel-rpmsg.dts
+fsl-ls1043a-qds-sdk.dts                   imx8mm-ddr4-evk.dts                             imx8mq-sr-som.dtsi                          imx8qxp-mek-lcdif.dts
+fsl-ls1043a-rdb.dts                       imx8mm-ddr4-evk-pcie-ep.dts                     imx8mq-zii-ultra.dtsi                       imx8qxp-mek-lcdif-rpmsg.dts
+fsl-ls1043a-rdb-sdk.dts                   imx8mm-ddr4-evk-revb.dts                        imx8mq-zii-ultra-rmb3.dts                   imx8qxp-mek-ov5640.dts
+fsl-ls1043a-rdb-usdpaa.dts                imx8mm-ddr4-evk-revb-rm67191.dts                imx8mq-zii-ultra-zest.dts                   imx8qxp-mek-ov5640-rpmsg.dts
+fsl-ls1043-post.dtsi                      imx8mm-ddr4-evk-rm67191.dts                     imx8qm-ddr4-val.dts                         imx8qxp-mek-pcie-ep.dts
+fsl-ls1046a.dtsi                          imx8mm.dtsi                                     imx8qm.dtsi                                 imx8qxp-mek-root.dts
+fsl-ls1046a-frwy.dts                      imx8mm-evk-8mic-revE.dts                        imx8qm-enet2-tja1100.dtsi                   imx8qxp-mek-rpmsg.dts
+fsl-ls1046a-frwy-sdk.dts                  imx8mm-evk-8mic-swpdm.dts                       imx8qm-lpddr4-val-ca53.dts                  imx8qxp-mek-sof-cs42888.dts
+fsl-ls1046a-frwy-usdpaa.dts               imx8mm-evk-ak4497.dts                           imx8qm-lpddr4-val-ca72.dts                  imx8qxp-mek-sof-wm8960.dts
+fsl-ls1046a-qds.dts                       imx8mm-evk-ak5558.dts                           imx8qm-lpddr4-val-dp.dts                    imx8qxp-ss-adma.dtsi
+fsl-ls1046a-qds-sdk.dts                   imx8mm-evk-audio-tdm.dts                        imx8qm-lpddr4-val.dts                       imx8qxp-ss-conn.dtsi
+fsl-ls1046a-rdb.dts                       imx8mm-evk.dts                                  imx8qm-lpddr4-val-lpspi.dts                 imx8qxp-ss-dc.dtsi
+fsl-ls1046a-rdb-sdk.dts                   imx8mm-evk-inmate.dts                           imx8qm-lpddr4-val-lpspi-slave.dts           imx8qxp-ss-gpu.dtsi
+fsl-ls1046a-rdb-usdpaa.dts                imx8mm-evk-pcie-ep.dts                          imx8qm-lpddr4-val-mqs.dts                   imx8qxp-ss-hsio.dtsi
+fsl-ls1046-post.dtsi                      imx8mm-evk-revb.dts                             imx8qm-lpddr4-val-spdif.dts                 imx8qxp-ss-img.dtsi
+fsl-ls1088a.dtsi                          imx8mm-evk-rm67191.dts                          imx8qm-mek-ca53.dts                         imx8qxp-ss-lcdif.dtsi
+fsl-ls1088a-qds.dts                       imx8mm-evk-root.dts                             imx8qm-mek-ca72.dts                         imx8qxp-ss-lsio.dtsi
+fsl-ls1088a-rdb.dts                       imx8mm-evk-rpmsg.dts                            imx8qm-mek-dom0.dts                         imx8qxp-ss-lvds.dtsi
+fsl-ls2080a.dtsi                          imx8mm-evk-usd-wifi.dts                         imx8qm-mek-domu.dts                         imx8-ss-adma.dtsi
+fsl-ls2080a-qds.dts                       imx8mm-pinfunc.h                                imx8qm-mek-dsi-rm67191.dts                  imx8-ss-audio.dtsi
+fsl-ls2080a-rdb.dts                       imx8mn-ab2.dts                                  imx8qm-mek-dsp.dts                          imx8-ss-cm40.dtsi
+fsl-ls2080a-simu.dts                      imx8mn-ddr4-ab2.dts                             imx8qm-mek.dts                              imx8-ss-cm41.dtsi
+fsl-ls2081a-rdb.dts                       imx8mn-ddr4-evk-ak5558.dts                      imx8qm-mek-enet2-tja1100.dts                imx8-ss-conn.dtsi
+fsl-ls2088a.dtsi                          imx8mn-ddr4-evk.dts                             imx8qm-mek-hdmi.dts                         imx8-ss-dc0.dtsi
+fsl-ls2088a-qds.dts                       imx8mn-ddr4-evk-inmate.dts                      imx8qm-mek-inmate.dts                       imx8-ss-dc1.dtsi
+fsl-ls2088a-rdb.dts                       imx8mn-ddr4-evk-rm67191.dts                     imx8qm-mek-jdi-wuxga-lvds1-panel.dts        imx8-ss-ddr.dtsi
+fsl-ls208xa.dtsi                          imx8mn-ddr4-evk-root.dts                        imx8qm-mek-jdi-wuxga-lvds1-panel.dtsi       imx8-ss-dma.dtsi
+fsl-ls208xa-qds.dtsi                      imx8mn-ddr4-evk-rpmsg.dts                       imx8qm-mek-jdi-wuxga-lvds1-panel-rpmsg.dts  imx8-ss-gpu0.dtsi
+fsl-ls208xa-rdb.dtsi                      imx8mn-ddr4-evk-usd-wifi.dts                    imx8qm-mek-ov5640.dts                       imx8-ss-gpu1.dtsi
+fsl-lx2160a.dtsi                          imx8mn.dtsi                                     imx8qm-mek-pcie-ep.dts                      imx8-ss-hsio.dtsi
+fsl-lx2160a-qds.dts                       imx8mn-evk-8mic-revE.dts                        imx8qm-mek-root.dts                         imx8-ss-img.dtsi
+fsl-lx2160a-rdb.dts                       imx8mn-evk-ak5558.dts                           imx8qm-mek-rpmsg.dts                        imx8-ss-lsio.dtsi
+fsl-tmu.dtsi                              imx8mn-evk.dts                                  imx8qm-mek-sof-cs42888.dts                  imx8-ss-security.dtsi
+fsl-tmu-map1.dtsi                         imx8mn-evk-inmate.dts                           imx8qm-mek-sof-wm8960.dts                   imx8-ss-v2x.dtsi
+fsl-tmu-map2.dtsi                         imx8mn-evk-rm67191.dts                          imx8qm-mek-usdhc3-m2.dts                    imx8-ss-vpu.dtsi
+fsl-tmu-map3.dtsi                         imx8mn-evk-root.dts                             imx8qm-mek-usd-wifi.dts                     imx8x-17x17-val.dtsi
+imx8dm.dtsi                               imx8mn-evk-rpmsg.dts                            imx8qm-pcieax2pciebx1.dts                   imx8x-mek-dpu-lcdif.dtsi
+imx8dm-lpddr4-val.dts                     imx8mn-pinfunc.h                                imx8qm-ss-audio.dtsi                        imx8x-mek.dtsi
+imx8dx-17x17-val.dts                      imx8mp-ab2.dts                                  imx8qm-ss-conn.dtsi                         imx8x-mek-it6263-lvds0-dual-channel.dtsi
+imx8dx.dtsi                               imx8mp.dtsi                                     imx8qm-ss-dc.dtsi                           imx8x-mek-it6263-lvds1-dual-channel.dtsi
+imx8dxl-ddr3-val.dts                      imx8mp-evk-basler.dts                           imx8qm-ss-ddr.dtsi                          imx8x-mek-jdi-wuxga-lvds0-panel.dtsi
+imx8dxl.dtsi                              imx8mp-evk-basler-ov5640.dts                    imx8qm-ss-dma.dtsi                          imx8x-mek-jdi-wuxga-lvds1-panel.dtsi
+imx8dxl-evk.dts                           imx8mp-evk-dsp.dts                              imx8qm-ss-gpu.dtsi                          imx8x-mek-lcdif.dtsi
+imx8dxl-evk-enet0.dts                     imx8mp-evk-dsp-lpa.dts                          imx8qm-ss-hdmi.dtsi                         imx8x-mek-rpmsg.dtsi
+imx8dxl-evk-enet0-tja1100.dts             imx8mp-evk.dts                                  imx8qm-ss-hsio.dtsi                         imx8x-val.dtsi
+imx8dxl-evk-inmate.dts                    imx8mp-evk-dual-ov2775.dts                      imx8qm-ss-img.dtsi                          Makefile
+imx8dxl-evk-lpspi-slave.dts               imx8mp-evk-flexcan2.dts                         imx8qm-ss-lsio.dtsi                         qoriq-bman-portals.dtsi
+imx8dxl-evk-pcie-ep.dts                   imx8mp-evk-inmate.dts                           imx8qm-ss-lvds.dtsi                         qoriq-bman-portals-sdk.dtsi
+imx8dxl-evk-root.dts                      imx8mp-evk-it6263-lvds-dual-channel.dts         imx8qm-ss-mipi.dtsi                         qoriq-dpaa-eth.dtsi
+imx8dxl-evk-rpmsg.dts                     imx8mp-evk-jdi-wuxga-lvds-panel.dts             imx8qm-xen.dtsi                             qoriq-fman3-0-10g-0.dtsi
+imx8dx-lpddr4-val.dts                     imx8mp-evk-ov2775.dts                           imx8qp.dtsi                                 qoriq-fman3-0-10g-1.dtsi
+imx8dxl-phantom-mek.dts                   imx8mp-evk-ov2775-ov5640.dts                    imx8qp-lpddr4-val.dts                       qoriq-fman3-0-1g-0.dtsi
+imx8dxl-phantom-mek.dtsi                  imx8mp-evk-pcie-ep.dts                          imx8q-val.dtsi                              qoriq-fman3-0-1g-1.dtsi
+imx8dxl-phantom-mek-rpmsg.dts             imx8mp-evk-rm67191.dts                          imx8qxp-17x17-val.dts                       qoriq-fman3-0-1g-2.dtsi
+imx8dxl-ss-adma.dtsi                      imx8mp-evk-root.dts                             imx8qxp-ai_ml.dts                           qoriq-fman3-0-1g-3.dtsi
+imx8dxl-ss-conn.dtsi                      imx8mp-evk-rpmsg.dts                            imx8qxp-ddr3l-val.dts                       qoriq-fman3-0-1g-4.dtsi
+imx8dxl-ss-ddr.dtsi                       imx8mp-evk-sof-wm8960.dts                       imx8qxp.dtsi                                qoriq-fman3-0-1g-5.dtsi
+imx8dxl-ss-hsio.dtsi                      imx8mp-evk-spdif-lb.dts                         imx8qxp-enet2-tja1100.dtsi                  qoriq-fman3-0-6oh.dtsi
+imx8dxl-ss-lsio.dtsi                      imx8mp-pinfunc.h                                imx8qxp-lpddr4-val-a0.dts                   qoriq-fman3-0.dtsi
+imx8dxl-ss-security.dtsi                  imx8mq-ddr3l-val.dts                            imx8qxp-lpddr4-val.dts                      qoriq-qman-portals.dtsi
+imx8dx-mek-dsi-rm67191.dts                imx8mq-ddr4-val.dts                             imx8qxp-lpddr4-val-gpmi-nand.dts            qoriq-qman-portals-sdk.dtsi
+imx8dx-mek-dsi-rm67191-rpmsg.dts          imx8mq-ddr4-val-gpmi-nand.dts                   imx8qxp-lpddr4-val-lpspi.dts                s32v234.dtsi
+imx8dx-mek-dsp.dts                        imx8mq.dtsi                                     imx8qxp-lpddr4-val-lpspi-slave.dts          s32v234-evb.dts
+imx8dx-mek.dts                            imx8mq-evk-ak4497.dts                           imx8qxp-lpddr4-val-mlb.dts                  s32v234-sbc.dts
+imx8dx-mek-enet2-tja1100.dts              imx8mq-evk-audio-tdm.dts                        imx8qxp-lpddr4-val-mqs.dts
+imx8dx-mek-it6263-lvds0-dual-channel.dts  imx8mq-evk-dcss-adv7535.dts                     imx8qxp-lpddr4-val-spdif.dts
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git/arch/arm64/boot/dts/freescale$ vim imx8
+Display all 264 possibilities? (y or n)
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git/arch/arm64/boot/dts/freescale$ vim imx8mn-evk-rm67191.dts
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git/arch/arm64/boot/dts/freescale$ 
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git/arch/arm64/boot/dts/freescale$ 
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git/arch/arm64/boot/dts/freescale$ 
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git/arch/arm64/boot/dts/freescale$ vim imx8mn-evk-rm67191.dts
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git/arch/arm64/boot/dts/freescale$ cd -
+/home/viha/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git$ cd drivers/
+viha@vihas-ubuntu20:~/myproject/workspace1/build_1/tmp/work/imx6qsabresd_mel-mel-linux-gnueabi/linux-mel/5.4.260-imx6qsabresd-mel+gitAUTOINC+d2733fa89b-r0/git/drivers$ 
+
+
