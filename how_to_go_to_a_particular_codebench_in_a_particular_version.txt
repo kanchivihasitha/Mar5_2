@@ -1,0 +1,60 @@
+viha@vihas-ubuntu20:~/mgc/embedded$ cd codebench/bin/
+viha@vihas-ubuntu20:~/mgc/embedded/codebench/bin$ ls
+sourcerygxx-ide
+viha@vihas-ubuntu20:~/mgc/embedded/codebench/bin$ ./sourcerygxx-ide 
+viha@vihas-ubuntu20:~/mgc/embedded/codebench/bin$ cd -
+/home/viha/mgc/embedded
+viha@vihas-ubuntu20:~/mgc/embedded$ cd mel-flex-os/12/
+viha@vihas-ubuntu20:~/mgc/embedded/mel-flex-os/12$ log4j:WARN No appenders could be found for logger (com.spotify.docker.client.DockerConfigReader).
+log4j:WARN Please initialize the log4j system properly.
+
+(Sourcery CodeBench IDE:4104208): Gtk-WARNING **: 16:24:05.584: Negative content width -1 (allocation 1, extents 1x1) while allocating gadget (node scrolledwindow, owner GtkScrolledWindow)
+
+viha@vihas-ubuntu20:~/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt$ ./qtcreator-mel.sh -q /home/viha/qtcreator-4.12.3/
+bin/                              InstallationLog.txt               lib/                              network.xml                       QtCreatorUninstaller.ini
+build-untitled3-MEL_Qt_Kit-Debug/ installer.dat                     libexec/                          QtCreatorUninstaller              share/
+components.xml                    installerResources/               Licenses/                         QtCreatorUninstaller.dat          untitled3/
+viha@vihas-ubuntu20:~/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt$ ./qtcreator-mel.sh -q /home/viha/qtcreator-4.12.3 -i iha@vihas-ubuntu20:~/mgc/embedded$ cd codebench/bin/
+
+Generating MEL ADE configurations for Qt Creator
+
+Creating debuggers.xml: /home/viha/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt/qtcreator/configs/QtProject/qtcreator/debuggers.xml
+Creating toolchains.xml: /home/viha/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt/qtcreator/configs/QtProject/qtcreator/toolchains.xml
+Creating qtversion.xml: /home/viha/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt/qtcreator/configs/QtProject/qtcreator/qtversion.xml
+Creating devices.xml: /home/viha/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt/qtcreator/configs/QtProject/qtcreator/devices.xml
+Creating profiles.xml: /home/viha/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt/qtcreator/configs/QtProject/qtcreator/profiles.xml
+
+MEL ADE configurations for Qt Creator generated.
+In order to deploy the project to target, you will have to configure a device in the IDE.
+
+Launching Qt Creator
+^C
+viha@vihas-ubuntu20:~/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt$ ./qtcreator-mel.sh -q /home/viha/qtcreator-4.12.3 -i 192.168.7.2
+
+INFO: Qt Creator path provided when configurations were already generated and path was saved!
+If you want to update the path remove /home/viha/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt/qtcreator/configs/qtc-init and relaunch.
+New path will be used for this run only.
+
+
+INFO: ADE already integrated, remove /home/viha/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt/qtcreator/configs/qtc-init if you want to rework the setup
+
+Launching Qt Creator
+viha@vihas-ubuntu20:~/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt$ ^C
+viha@vihas-ubuntu20:~/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt$ rm -r /home/viha/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt/qtcreator/configs/qtc-init
+viha@vihas-ubuntu20:~/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt$ ./qtcreator-mel.sh -q /home/viha/qtcreator-4.12.3 -i 192.168.7.2
+
+Generating MEL ADE configurations for Qt Creator
+
+Creating debuggers.xml: /home/viha/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt/qtcreator/configs/QtProject/qtcreator/debuggers.xml
+Creating toolchains.xml: /home/viha/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt/qtcreator/configs/QtProject/qtcreator/toolchains.xml
+Creating qtversion.xml: /home/viha/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt/qtcreator/configs/QtProject/qtcreator/qtversion.xml
+Creating devices.xml: /home/viha/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt/qtcreator/configs/QtProject/qtcreator/devices.xml
+Creating profiles.xml: /home/viha/mgc/embedded/mel-flex-os/ade/ade-x86_64-development-image-qemuarm-12.1707797721/sysroots/x86_64-melsdk-linux/opt/qtcreator/configs/QtProject/qtcreator/profiles.xml
+
+MEL ADE configurations for Qt Creator generated.
+In order to deploy the project to target, you will have to configure a device in the IDE.
+
+Launching Qt Creator
+Info: creating stash file /home/viha/build-untitled3-MEL_Qt_Kit-Debug/.qmake.stash
+*** UNEXPECTED STATE TRANSITION:  Debugger::Internal::GdbEngine(0x4618c50, name = "GdbEngine") "State changed from EngineShutdownRequested(15) to InferiorShutdownFinished(14)"
+

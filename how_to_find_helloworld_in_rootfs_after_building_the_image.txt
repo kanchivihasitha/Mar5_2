@@ -1,0 +1,163 @@
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2$ 
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2$ 
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2$ 
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2$ ^C
+
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2$ echo $
+Display all 115 possibilities? (y or n)
+$_                         $BASH_VERSION              $EPOCHREALTIME             $HISTCMD                   $LINES                     $QT_ACCESSIBILITY          $WINDOWPATH
+$_backup_glob              $COLORTERM                 $EPOCHSECONDS              $HISTCONTROL               $LOGNAME                   $QT_IM_MODULE              $words
+$BASH                      $COLUMNS                   $EUID                      $HISTFILE                  $LS_COLORS                 $RANDOM                    $XAUTHORITY
+$BASH_ALIASES              $COMP_CWORD                $exclude                   $HISTFILESIZE              $MACHTYPE                  $redir                     $XDG_CONFIG_DIRS
+$BASH_ARGC                 $COMP_KEY                  $flag                      $HISTSIZE                  $MAILCHECK                 $SECONDS                   $XDG_CURRENT_DESKTOP
+$BASH_ARGV                 $COMP_LINE                 $FUNCNAME                  $HOME                      $MANAGERPID                $SESSION_MANAGER           $XDG_DATA_DIRS
+$BASH_ARGV0                $COMP_POINT                $GDMSESSION                $HOSTNAME                  $OPTERR                    $SHELL                     $XDG_MENU_PREFIX
+$BASH_CMDS                 $COMPREPLY                 $__git_printf_supports_v   $HOSTTYPE                  $OPTIND                    $SHELLOPTS                 $XDG_RUNTIME_DIR
+$BASH_COMMAND              $COMP_TYPE                 $GJS_DEBUG_OUTPUT          $IFS                       $OSTYPE                    $SHLVL                     $XDG_SESSION_CLASS
+$BASH_COMPLETION_VERSINFO  $COMP_WORDBREAKS           $GJS_DEBUG_TOPICS          $IM_CONFIG_PHASE           $PATH                      $split                     $XDG_SESSION_DESKTOP
+$BASH_LINENO               $COMP_WORDS                $GNOME_DESKTOP_SESSION_ID  $INVOCATION_ID             $PIPESTATUS                $SSH_AGENT_PID             $XDG_SESSION_TYPE
+$BASHOPTS                  $cur                       $GNOME_SHELL_SESSION_MODE  $JOURNAL_STREAM            $PPID                      $SSH_AUTH_SOCK             $XMODIFIERS
+$BASHPID                   $cword                     $GNOME_TERMINAL_SCREEN     $LANG                      $prev                      $TERM                      $_xspecs
+$BASH_REMATCH              $DBUS_SESSION_BUS_ADDRESS  $GNOME_TERMINAL_SERVICE    $LANGUAGE                  $PS1                       $UID                       
+$BASH_SOURCE               $DESKTOP_SESSION           $GPG_AGENT_INFO            $LESSCLOSE                 $PS2                       $USER                      
+$BASH_SUBSHELL             $DIRSTACK                  $GROUPS                    $LESSOPEN                  $PS4                       $USERNAME                  
+$BASH_VERSINFO             $DISPLAY                   $GTK_MODULES               $LINENO                    $PWD                       $VTE_VERSION               
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2$ echo $^C
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2$ cd ..
+viha@vihas-ubuntu20:~/myproject/workspace2$ ls
+bitbake      downloads                meta-gplv2   meta-mentor-bsp  meta-mentor-private        meta-oe   meta-qt5-mel   meta-tracing  oe-core  toolchains
+build_qemu2  meta-external-toolchain  meta-mentor  meta-mentor-cve  meta-mentor-user_examples  meta-qt5  meta-sourcery  mylayer       qemuarm  tools
+viha@vihas-ubuntu20:~/myproject/workspace2$ cd -
+/home/viha/myproject/workspace2/build_qemu2
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2$ source setup-environment 
+Common targets are:
+
+    core-image-base
+    development-image
+    production-image
+
+production-image requires that the ROOT_PASSWORD variable be set. See
+conf/local.conf for details.
+
+For qemu machines, you can also run the generated qemu images with a command
+like 'runqemu qemux86'.
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2$ bitbake -e helloworld | grep -e ^S=
+ERROR: Unable to start bitbake server (None)
+ERROR: Server log for this session (/home/viha/myproject/workspace2/build_qemu2/bitbake-cookerdaemon.log):
+--- Starting bitbake server pid 1022226 at 2024-02-14 16:33:49.758141 ---
+ERROR: The following layer directories do not exist:
+ERROR:    /home/user/myproject/workspace2/mylayer
+ERROR: Please check BBLAYERS in /home/viha/myproject/workspace2/build_qemu2/conf/bblayers.conf
+
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2$ 
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2$ 
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2$ 
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2$ 
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2$ cd tmp/work
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2/tmp/work$ ls
+all-mel-linux  armv7vet2hf-neon-mel-linux-gnueabi  qemuarm-mel-linux-gnueabi  x86_64-linux
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2/tmp/work$ cd 
+all-mel-linux/                      armv7vet2hf-neon-mel-linux-gnueabi/ qemuarm-mel-linux-gnueabi/          x86_64-linux/                       
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2/tmp/work$ cd qemuarm-mel-linux-gnueabi/
+base-files/                      development-image/               lttng-modules/                   opkg-arch-config/                packagegroup-core-tools-profile/ systemd-conf/
+connman-conf/                    fbset-modes/                     make-mod-scripts/                packagegroup-base/               perf/                            systemd-serialgetty/
+depmodwrapper-cross/             linux-yocto/                     mel-initramfs-image/             packagegroup-core-boot/          shadow-securetty/                weston-init/
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2/tmp/work$ cd qemuarm-mel-linux-gnueabi/development-image/1.0-r0/
+deploy-development-image-image-complete/                                            recipe-sysroot-native/
+development-image-1.0/                                                              rootfs/
+intercept_scripts-d2be3d17302a25be79b18cfc7f4ae742c1e75fbdb6148f129851d858dbd43ddb/ sstate-install-image_complete/
+oe-rootfs-repo/                                                                     sstate-install-image_qa/
+pseudo/                                                                             temp/
+recipe-sysroot/                                                                     
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2/tmp/work$ cd qemuarm-mel-linux-gnueabi/development-image/1.0-r0/rootfs/
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2/tmp/work/qemuarm-mel-linux-gnueabi/development-image/1.0-r0/rootfs$ ls
+bin  boot  dev  etc  home  lib  media  mnt  proc  run  sbin  sys  tmp  usr  var
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2/tmp/work/qemuarm-mel-linux-gnueabi/development-image/1.0-r0/rootfs$ cd usr/bin/
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2/tmp/work/qemuarm-mel-linux-gnueabi/development-image/1.0-r0/rootfs/usr/bin$ ls
+'['                                callgrind_annotate                   expiry                     ld                      passwd            ssh                       vlock
+'[['                               callgrind_control                    expr                       ld.bfd                  passwd.shadow     ssh-keygen                wc
+ addr2line                         c++filt                              faillog                    ld.gold                 patch             ssh.openssh               wcap-decode
+ alsamixer                         cg_annotate                          fc-cache                   less                    perf              strace                    weston
+ amixer                            cg_diff                              fc-cat                     libevdev-tweak-device   perl              strace-log-merge          weston-calibrator
+ aplay                             cg_merge                             fc-conflist                loadkeys                pkcs1-conv        strings                   weston-clickdot
+ ar                                chage                                fc-list                    loadunimap              printf            strip                     weston-cliptest
+ arecord                           chfn                                 fc-match                   localectl               psfaddtable       systemd-analyze           weston-confine
+ arm-mel-linux-gnueabi-addr2line   chfn.shadow                          fc-pattern                 logger                  psfgettable       systemd-cat               weston-content_protection
+ arm-mel-linux-gnueabi-ar          chsh                                 fc-query                   logname                 psfstriptable     systemd-cgls              weston-debug
+ arm-mel-linux-gnueabi-as          chsh.shadow                          fc-scan                    lsdistcc                psfxtable         systemd-cgtop             weston-dnd
+ arm-mel-linux-gnueabi-c++filt     chvt                                 fc-validate                lttng                   psplash           systemd-delta             weston-editor
+ arm-mel-linux-gnueabi-dwp         chvt.kbd                             fgconsole                  lttng-crash             psplash-default   systemd-detect-virt       weston-eventdemo
+ arm-mel-linux-gnueabi-elfedit     ciptool                              fgconsole.kbd              lttng-relayd            psplash-systemd   systemd-id128             weston-flower
+ arm-mel-linux-gnueabi-gprof       clear                                find                       lttng-sessiond          psplash-write     systemd-mount             weston-fullscreen
+ arm-mel-linux-gnueabi-ld          cmp                                  flock                      lz4                     pulseaudio        systemd-path              weston-image
+ arm-mel-linux-gnueabi-ld.bfd      cmst                                 free                       lz4c                    qml-launcher      systemd-resolve           weston-info
+ arm-mel-linux-gnueabi-ld.gold     cut                                  fuser                      lz4cat                  ranlib            systemd-run               weston-launch
+ arm-mel-linux-gnueabi-nm          dbus-cleanup-sockets                 gconf-merge-tree           lzcat                   rctest            systemd-socket-activate   weston-multi-resource
+ arm-mel-linux-gnueabi-objcopy     dbus-daemon                          gconftool-2                mapscrn                 readelf           systemd-stdio-bridge      weston-presentation-shm
+ arm-mel-linux-gnueabi-objdump     dbus-launch                          gdbserver                  md5sum                  readlink          systemd-umount            weston-resizor
+ arm-mel-linux-gnueabi-ranlib      dbus-monitor                         getkeycodes                mesg                    realpath          tail                      weston-scaler
+ arm-mel-linux-gnueabi-readelf     dbus-run-session                     gpasswd                    microcom                renice            tee                       weston-screenshooter
+ arm-mel-linux-gnueabi-size        dbus-send                            gprof                      mkfifo                  reset             telnet                    weston-simple-damage
+ arm-mel-linux-gnueabi-strings     dbus-update-activation-environment   groups                     mouse-dpi-tool          resize            test                      weston-simple-dmabuf-egl
+ arm-mel-linux-gnueabi-strip       dbus-uuidgen                         groups.shadow              mpicalc                 resolvectl        tftp                      weston-simple-dmabuf-v4l
+ as                                dc                                   gsettings-data-convert     mpris-proxy             rfcomm            time                      weston-simple-egl
+ awk                               deallocvt                            gsettings-schema-convert   ms_print                rngtest           timedatectl               weston-simple-shm
+ axfer                             deallocvt.kbd                        gst-inspect-1.0            mtdev-test              rpcinfo           timeout                   weston-simple-touch
+ babeltrace                        diff                                 gst-launch-1.0             nc                      rpcinfo.rpcbind   top                       weston-smoke
+ babeltrace2                       dirname                              gst-stats-1.0              nettle-hash             scp               touchpad-edge-detector    weston-stacking
+ babeltrace-log                    distcc                               gst-typefind-1.0           nettle-lfib-stream      scp.openssh       tr                        weston-start
+ basename                          distccmon-text                       hciattach                  nettle-pbkdf2           sdptool           trace                     weston-subsurfaces
+ blkiomon                          du                                   hciconfig                  newgidmap               seq               traceroute                weston-terminal
+ blkparse                          dumpkeys                             hcidump                    newgrp                  setfont           ts                        weston-touch-calibrator
+ blkrawverify                      dumpleases                           hcitool                    newgrp.shadow           setkeycodes       tty                       weston-transformed
+ blktrace                          dwp                                  head                       newuidmap               setleds           unicode_start             wget
+ bluemoon                          elfedit                              hex2hcd                    nm                      setmetamode       unicode_stop              which
+ bluetoothctl                      env                                  hexdump                    nohup                   setsid            uniq                      who
+ bno_plot.py                       eu-ar                                hostnamectl                nproc                   setvtrgb          unlink                    whoami
+ bsdcat                            eu-elfclassify                       id                         nslookup                sexp-conv         unlz4                     wpa_passphrase
+ btattach                          eu-elfcmp                            iowatcher                  objcopy                 sg                unzip                     xargs
+ btmon                             eu-elfcompress                       iptables-xml               objdump                 sha1sum           update-alternatives       xzcat
+ btrace                            eu-elflint                           isotest                    od                      sha256sum         update-mime-database      yat2m
+ btrecord                          eu-findtextrel                       kbdinfo                    openvt                  showconsolefont   uptime                    yes
+ btreplay                          eu-make-debug-archive                kbd_mode                   openvt.kbd              showkey           users
+ btt                               eu-objdump                           kbdrate                    opkg                    showkey.kbd       valgrind
+ bunzip2                           eu-ranlib                            killall                    opkg-check-config       shuf              valgrind-di-server
+ busctl                            eu-stack                             l2ping                     pactl                   size              valgrind-listener
+ bzcat                             eu-strings                           l2test                     pango-list              slsh              verify_blkparse
+ bzip2                             eu-unstrip                           lastlog                    pango-view              sort              vgdb
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2/tmp/work/qemuarm-mel-linux-gnueabi/development-image/1.0-r0/rootfs/usr/bin$ ls he
+head     hex2hcd  hexdump  
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2/tmp/work/qemuarm-mel-linux-gnueabi/development-image/1.0-r0/rootfs/usr/bin$ ls he
+head     hex2hcd  hexdump  
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2/tmp/work/qemuarm-mel-linux-gnueabi/development-image/1.0-r0/rootfs/usr/bin$ cd ..
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2/tmp/work/qemuarm-mel-linux-gnueabi/development-image/1.0-r0/rootfs/usr$ cd ..
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2/tmp/work/qemuarm-mel-linux-gnueabi/development-image/1.0-r0/rootfs$ ls -R | grep -i hello
+hellogles3.desktop
+hellogl2
+hellogles3
+hellowindow
+./usr/share/qt5/examples/opengl/hellogl2:
+hellogl2
+hellogl2.pro
+./usr/share/qt5/examples/opengl/hellogles3:
+hellogles3
+hellogles3.pro
+hellogles3.qrc
+./usr/share/qt5/examples/opengl/hellowindow:
+hellowindow
+hellowindow.cpp
+hellowindow.h
+hellowindow.pro
+hellogl
+./usr/share/qt5/examples/opengl/legacy/hellogl:
+hellogl.pro
+hello.qml
+helloworld
+./usr/share/qt5/examples/quick/tutorials/helloworld:
+viha@vihas-ubuntu20:~/myproject/workspace2/build_qemu2/tmp/work/qemuarm-mel-linux-gnueabi/development-image/1.0-r0/rootfs$ find ./ -iname helloworld
+./usr/share/qt5/examples/quick/tutorials/helloworld 
+
+
+
+
+
